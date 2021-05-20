@@ -1,3 +1,21 @@
+/*TABLE OF CONTENTS*/
+
+
+/*1. Variables*/
+
+
+/*2. Elements*/
+
+
+/*3. Classes*/
+
+
+/*4. Animations*/
+
+
+/*----------------------Variables-----------------------------*/
+
+
 /*Colors*/
 
 html {
@@ -8,6 +26,9 @@ html {
     --salmon: #f38375ff;
 }
 
+
+/*----------------------Elements-----------------------------*/
+
 body {
     background-color: var(--raisin-black);
     overflow: hidden;
@@ -16,6 +37,9 @@ body {
 p {
     color: var(--jasmine);
 }
+
+
+/*----------------------Classes-----------------------------*/
 
 .container {
     position: absolute;
@@ -63,7 +87,23 @@ p {
     -o-animation-fill-mode: forwards;
     -ms-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    position: fixed;
 }
+
+.subcontainer {
+    animation-name: fadein_anim;
+    animation-duration: 2s;
+    animation-delay: 4s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+
+/*----------------------Animations-----------------------------*/
 
 @keyframes splash_text_anim {
     0% {
@@ -82,5 +122,14 @@ p {
     }
     100% {
         opacity: 0;
+    }
+}
+
+@keyframes fadein_anim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
