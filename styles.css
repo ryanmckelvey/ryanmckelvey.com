@@ -1,0 +1,86 @@
+/*Colors*/
+
+html {
+    --raisin-black: #27292bff;
+    --opal: #92b9bdff;
+    --jasmine: #f2d77dff;
+    --fire-opal: #ef6351ff;
+    --salmon: #f38375ff;
+}
+
+body {
+    background-color: var(--raisin-black);
+    overflow: hidden;
+}
+
+p {
+    color: var(--jasmine);
+}
+
+.container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0%;
+    width: 100%;
+    top: 20px;
+    bottom: 40px;
+}
+
+.splash p {
+    font-size: 72px;
+    word-spacing: 15%;
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.hey {
+    animation-name: splash_text_anim;
+    animation-duration: 1.5s;
+}
+
+.myname {
+    opacity: 0;
+    animation-name: splash_text_anim;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
+}
+
+.splash {
+    animation-name: fade_anim;
+    animation-duration: 1s;
+    animation-delay: 4s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes splash_text_anim {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade_anim {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
