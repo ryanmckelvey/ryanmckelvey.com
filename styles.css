@@ -42,6 +42,10 @@ h4 {
     float: left;
 }
 
+ul {
+    padding: 0%;
+}
+
 
 /*----------------------Classes-----------------------------*/
 
@@ -52,6 +56,7 @@ h4 {
     animation-delay: 4s;
     position: absolute;
     display: flex;
+    justify-content: space-around;
     flex-direction: column;
     flex: 1 0 auto;
     top: 0px;
@@ -66,6 +71,7 @@ h4 {
     -o-animation-fill-mode: forwards;
     -ms-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    padding-left: 0px;
 }
 
 .nav-class li {
@@ -83,8 +89,7 @@ h4 {
     -ms-transition: background-position 75ms, color 75ms ease, border-color 75ms ease;
     -o-transition: background-position 75ms, color 75ms ease, border-color 75ms ease;
     transition: background-position 75ms, color 75ms ease, border-color 75ms ease;
-    padding-top: 10px;
-    padding-left: 15px;
+    padding-top: 7px;
     padding-right: 15px;
 }
 
