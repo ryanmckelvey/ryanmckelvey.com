@@ -34,13 +34,96 @@ body {
     overflow: hidden;
 }
 
-p {
-    color: var(--jasmine);
+h4 {
+    font-family: 'Robto', sans-serif;
+    font-weight: 300;
+    font-size: 45px;
+    margin: 0%;
+    float: left;
 }
 
 
 /*----------------------Classes-----------------------------*/
 
+.nav-class {
+    opacity: 0;
+    animation-name: fadein_anim;
+    animation-duration: 2s;
+    animation-delay: 4s;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    top: 0px;
+    left: 0px;
+    margin: 0%;
+    background-color: var(--jasmine);
+    overflow: hidden;
+    width: 100%;
+    box-shadow: 0 1px 2px 0 rgb(255 255 255 / 30%), 0 2px 6px 2px rgb(255 255 255 / 15%);
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.nav-class li {
+    display: block;
+    float: right;
+    color: var(--raisin-black);
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-size: 200% 200%;
+    background-image: linear-gradient(to top, #ffffff 50%, transparent 50%);
+    -webkit-transition: background-position 75ms, color 75ms ease, border-color 75ms ease;
+    -moz-transition: background-position 75ms, color 75ms ease, border-color 75ms ease;
+    -ms-transition: background-position 75ms, color 75ms ease, border-color 75ms ease;
+    -o-transition: background-position 75ms, color 75ms ease, border-color 75ms ease;
+    transition: background-position 75ms, color 75ms ease, border-color 75ms ease;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.nav-class h4 {
+    display: block;
+    float: left;
+    color: var(--raisin-black);
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-size: 200% 200%;
+    background-image: linear-gradient(to top, #ffffff 50%, transparent 50%);
+    -webkit-transition: background-position 75ms, color 75ms ease, border-color 75ms ease;
+    -moz-transition: background-position 75ms, color 75ms ease, border-color 75ms ease;
+    -ms-transition: background-position 75ms, color 75ms ease, border-color 75ms ease;
+    -o-transition: background-position 75ms, color 75ms ease, border-color 75ms ease;
+    transition: background-position 75ms, color 75ms ease, border-color 75ms ease;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+}
+.nav-class li:hover {
+    color: var(--raisin-black);
+    background-image: linear-gradient(to top, #ffffff 51%, transparent 50%);
+    background-position: 0 100%;
+    -webkit-transition: background-position 75ms, color 75ms ease, border-color 75ms ease;
+    -moz-transition: background-position 75ms, color 75ms ease, border-color 75ms ease;
+    -ms-transition: background-position 75ms, color 75ms ease, border-color 75ms ease;
+    -o-transition: background-position 75ms, color 75ms ease, border-color 75ms ease;
+    transition: background-position 75ms, color 75ms ease, border-color 75ms ease;
+}
+.nav-class li.active {
+    background-color: #ffffff;
+    color: #3B3B3B;
+}
 .container {
     position: absolute;
     display: flex;
@@ -52,7 +135,6 @@ p {
     top: 20px;
     bottom: 40px;
 }
-
 .splash p {
     font-size: 72px;
     word-spacing: 15%;
@@ -64,20 +146,18 @@ p {
     -o-animation-fill-mode: forwards;
     -ms-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    color: var(--jasmine);
 }
-
 .hey {
     animation-name: splash_text_anim;
     animation-duration: 1.5s;
 }
-
 .myname {
     opacity: 0;
     animation-name: splash_text_anim;
     animation-duration: 1.5s;
     animation-delay: 1.5s;
 }
-
 .splash {
     animation-name: fade_anim;
     animation-duration: 1s;
@@ -89,7 +169,6 @@ p {
     animation-fill-mode: forwards;
     position: fixed;
 }
-
 .subcontainer {
     animation-name: fadein_anim;
     animation-duration: 2s;
@@ -102,33 +181,32 @@ p {
     opacity: 0;
 }
 
-
 /*----------------------Animations-----------------------------*/
-
 @keyframes splash_text_anim {
     0% {
         opacity: 0;
         transform: translateY(-30px);
     }
+    
     100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
-
 @keyframes fade_anim {
     0% {
         opacity: 1;
     }
+    
     100% {
         opacity: 0;
     }
 }
-
 @keyframes fadein_anim {
     0% {
         opacity: 0;
     }
+    
     100% {
         opacity: 1;
     }
