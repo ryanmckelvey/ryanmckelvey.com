@@ -1,0 +1,16 @@
+{
+    "name": "resume-site",
+    "version": "0.0.0",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "serve": "vite preview",
+        "start": "node --experimental-worker ./main.js"
+    },
+    "devDependencies": {
+        "vite": "^2.3.3"
+    },
+    "dependencies": {
+        "three": "^0.128.0"
+    }
+}

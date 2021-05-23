@@ -50,7 +50,7 @@ ul {
 /*----------------------Classes-----------------------------*/
 
 .nav-class {
-    opacity: 0;
+    opacity: 1;
     animation-name: fadein_anim;
     animation-duration: 2s;
     animation-delay: 4s;
@@ -113,8 +113,6 @@ ul {
     padding-right: 15px;
 }
 
-
-}
 .nav-class li:hover {
     color: var(--raisin-black);
     background-image: linear-gradient(to top, #ffffff 51%, transparent 50%);
@@ -125,10 +123,12 @@ ul {
     -o-transition: background-position 75ms, color 75ms ease, border-color 75ms ease;
     transition: background-position 75ms, color 75ms ease, border-color 75ms ease;
 }
+
 .nav-class li.active {
     background-color: #ffffff;
     color: #3B3B3B;
 }
+
 .container {
     position: absolute;
     display: flex;
@@ -140,6 +140,7 @@ ul {
     top: 20px;
     bottom: 40px;
 }
+
 .splash p {
     font-size: 72px;
     word-spacing: 15%;
@@ -153,16 +154,19 @@ ul {
     animation-fill-mode: forwards;
     color: var(--jasmine);
 }
+
 .hey {
     animation-name: splash_text_anim;
     animation-duration: 1.5s;
 }
+
 .myname {
     opacity: 0;
     animation-name: splash_text_anim;
     animation-duration: 1.5s;
     animation-delay: 1.5s;
 }
+
 .splash {
     animation-name: fade_anim;
     animation-duration: 1s;
@@ -174,6 +178,7 @@ ul {
     animation-fill-mode: forwards;
     position: fixed;
 }
+
 .subcontainer {
     animation-name: fadein_anim;
     animation-duration: 2s;
@@ -186,33 +191,52 @@ ul {
     opacity: 0;
 }
 
+
 /*----------------------Animations-----------------------------*/
+
 @keyframes splash_text_anim {
     0% {
         opacity: 0;
         transform: translateY(-30px);
     }
-    
     100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
+
 @keyframes fade_anim {
     0% {
         opacity: 1;
     }
-    
     100% {
         opacity: 0;
     }
 }
+
 @keyframes fadein_anim {
     0% {
         opacity: 0;
     }
-    
     100% {
         opacity: 1;
     }
+}
+
+
+/*-----------3d------------*/
+
+canvas {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    animation-name: fadein_anim;
+    animation-duration: 2s;
+    animation-delay: 4s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    opacity: 0;
 }
