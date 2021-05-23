@@ -52,23 +52,25 @@ orbiterArray.forEach(e => {
     e.position.set()
 });*/
 
-function addStar() {
+function addOrb() {
     const orbiterShape = new THREE.IcosahedronGeometry(0.25, 24, 24);
     const orbierMat = new THREE.MeshStandardMaterial({ color: 0xffffff, wireframe: true });
-    const orbiter = new THREE.Mesh(orbiterShape, orbierMat);
+    const orb = new THREE.Mesh(orbiterShape, orbierMat);
 
     const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(100));
-    orbiter.position.set(x, y, z);
-    scene.add(orbiter);
+    orb.position.set(x, y, z);
+    scene.add(orb);
 }
 
-Array(200).fill().forEach(addStar);
+Array(200).fill().forEach(addOrb);
 
 const controls = new OrbitControls(camera, renderer.domElement);
 
 function animate() {
     requestAnimationFrame(animate);
     renderer.render(scene, camera);
+
+    controls.update();
 
     ico.rotation.x += 0.01;
     ico.rotation.y += 0.005;
