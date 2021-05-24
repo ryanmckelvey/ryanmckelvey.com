@@ -11,6 +11,8 @@
         "vite": "^2.3.3"
     },
     "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.15.3",
+        "font-awesome": "^4.7.0",
         "three": "^0.128.0"
     }
 }

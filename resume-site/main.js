@@ -14,6 +14,7 @@ renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setClearColor(0x27292B);
 camera.position.setZ(25);
+camera.position.setY(3);
 
 
 renderer.render(scene, camera);
@@ -27,7 +28,7 @@ const ico = new THREE.Mesh(geometry, material);
 
 scene.add(ico);
 const light = new THREE.AmbientLight(0xffffff);
-light.position.set(5, 5, 5);
+light.position.set(25, 25, 5);
 scene.add(light);
 
 const grid = new THREE.GridHelper(200, 50);
@@ -64,13 +65,12 @@ function addOrb() {
 
 Array(200).fill().forEach(addOrb);
 
-const controls = new OrbitControls(camera, renderer.domElement);
+//const controls = new OrbitControls(camera, renderer.domElement);
 
 function animate() {
     requestAnimationFrame(animate);
     renderer.render(scene, camera);
 
-    controls.update();
 
     ico.rotation.x += 0.01;
     ico.rotation.y += 0.005;
