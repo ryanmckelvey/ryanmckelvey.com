@@ -4,11 +4,14 @@ function getRepos() {
         return repos.then(async(list) => {
             var repoList = list.json();
             const x = await repoList;
-            console.log(x);
             return x;
         })
     } catch {
         console.log("error retrieving repos")
     }
 }
-x = getRepos();
+getRepos().then((result) => {
+    result.forEach(repo => {
+
+    });
+});
