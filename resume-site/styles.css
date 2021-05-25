@@ -38,18 +38,23 @@ a:active {
     color: inherit;
 }
 
+footer {
+    top: 20px;
+}
+
 
 /*----------------------Classes-----------------------------*/
 
 .header,
 .contact,
-.history {
+.history,
+.projects {
     background-color: #3B3C36;
     color: white;
     border-radius: 25px;
     padding: 15px;
-    margin-top: 30%;
-    margin-bottom: 15%;
+    margin-top: 25%;
+    margin-bottom: 25%;
     -webkit-box-shadow: 0 10px 6px -6px #777;
     -moz-box-shadow: 0 10px 6px -6px #777;
     box-shadow: 0 10px 6px -6px #777;
@@ -65,9 +70,9 @@ a:active {
 }
 
 .header {
-    grid-column: 5/9;
+    grid-column: 2/12;
     font-family: 'IBM Plex Sans', sans-serif;
-    font-size: large;
+    font-size: 16px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -84,11 +89,11 @@ a:active {
     display: inline-block;
     list-style-type: none;
     margin-right: -4px;
-    padding-right: 40px;
-    padding-left: 40px;
+    padding-right: 30px;
+    padding-left: 30px;
     border-right: 1px solid white;
     border-left: 1px solid white;
-    font-size: 48px;
+    font-size: 32px;
     color: white;
 }
 
@@ -107,7 +112,6 @@ a:active {
 
 .history {
     grid-column: 2/12;
-    grid-row: 10;
 }
 
 .history h3 {
@@ -120,6 +124,11 @@ a:active {
 
 .history div {
     border-bottom: #27292bff 1px solid;
+}
+
+.projects {
+    grid-column: 2/12;
+    grid-row: 10;
 }
 
 .contact {
@@ -141,8 +150,7 @@ a:active {
 }
 
 .splash p {
-    font-size: 72px;
-    word-spacing: 15%;
+    font-size: 36px;
     font-family: 'IBM Plex Sans', sans-serif;
     margin-bottom: 5%;
     margin-top: 5%;
@@ -180,6 +188,57 @@ a:active {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+
+/*----------------------Desktop view----------------------------*/
+
+@media only screen and (min-width: 768px) {
+    .header,
+    .contact,
+    .history {
+        padding: 15px;
+        margin-bottom: 0%;
+    }
+    .header {
+        grid-column: 5/9;
+        font-size: large;
+    }
+    .header-list ul li {
+        display: inline-block;
+        list-style-type: none;
+        margin-right: -4px;
+        padding-right: 40px;
+        padding-left: 40px;
+        font-size: 48px;
+        color: white;
+    }
+    .history {
+        grid-column: 2/12;
+        grid-row: 8;
+    }
+    .projects {
+        grid-row: 10;
+    }
+    .contact {
+        grid-column: 6/8;
+        grid-row: 15;
+        bottom: 50px;
+    }
+    .container {
+        position: absolute;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(20, 1fr);
+        justify-content: center;
+        margin: 0%;
+        width: 100%;
+        top: 20px;
+        bottom: 40px;
+    }
+    .splash p {
+        font-size: 72px;
+    }
 }
 
 
