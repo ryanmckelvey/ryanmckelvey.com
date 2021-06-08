@@ -48,7 +48,7 @@ footer {
 .header,
 .contact,
 .history,
-.projects {
+#projects {
     background-color: #3B3C36;
     color: white;
     border-radius: 25px;
@@ -130,7 +130,7 @@ footer {
     border-bottom: #27292bff 1px solid;
 }
 
-.projects {
+#projects {
     grid-column: 4/10;
     grid-row: 10/11;
     display: flex;
@@ -140,7 +140,7 @@ footer {
     padding: 3px;
 }
 
-.projects h4 {
+#projects h4 {
     align-self: center;
     justify-self: center;
 }
