@@ -14,14 +14,17 @@ getRepos().then((result) => {
     var index = 0
     result.forEach(repo => {
         if (index <= 6) {
+            console.log(repo)
+            var url = "https://github.com/ryanmckelvey/" + repo.name
             var div = document.createElement('div');
             div.setAttribute('id', 'project');
             div.innerHTML = `
-            <a>
-            <h5>made with loop :o ${index}</h5>
-            <p>description description description</p>
-            <p>Created date</p>
-            <a>Linky boy</a>
+            <a href="${url}">
+            <h5>${repo.name}</h5>
+            <p>${repo.language}
+            <p>${repo.description}</p>
+            <p>${repo.created_at}</p>
+            <a href="${url}">Linky</a>
             </a>
             `;
             document.getElementById('projects').appendChild(div)
