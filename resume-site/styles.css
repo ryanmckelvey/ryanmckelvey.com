@@ -140,9 +140,10 @@ footer {
     padding: 3px;
 }
 
-#projects h4 {
-    align-self: center;
+#projects h3 {
+    font-family: 'Robto', sans-serif;
     justify-self: center;
+    align-self: center;
 }
 
 .project {
