@@ -131,26 +131,52 @@ footer {
 }
 
 #projects {
-    grid-column: 4/10;
+    grid-column: 2/12;
     grid-row: 10/11;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
     flex-direction: column;
     justify-content: space-evenly;
     flex-wrap: wrap;
     padding: 3px;
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 
-#projects h3 {
+#projects .prj-header {
     font-family: 'Robto', sans-serif;
     justify-self: center;
     align-self: center;
+    flex-direction: column;
+    font-size: larger;
+    padding: 5%;
+}
+
+.prj-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prj-header p {
+    text-align: center;
 }
 
 .project {
-    grid-row: 1;
     padding: 5px;
     margin: 2px;
     border-bottom: #27292bff 1px solid;
+    font-family: 'IBM Plex Sans', sans-serif;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    max-width: 50%;
+    margin: 10px;
+}
+
+.project a {
+    text-decoration: none;
 }
 
 .contact {
