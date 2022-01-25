@@ -6,6 +6,7 @@ html {
     --kombugreen: #38423b;
     --darkslategray: #3f5e5a;
     --springgreen: #20fc8f;
+    height: 100%;
 }
 
 
@@ -57,46 +58,83 @@ body {
         justify-content: left;
         align-content: center;
     }
+    /*Main page*/
     .container {
         width: 100%;
         height: 100%;
-        margin: 0;
         display: flex;
         justify-content: center;
         align-content: center;
     }
     #main-page {
-        width: 100%;
+        width: 80%;
         height: 100%;
-        margin-left: 8%;
-        display: inline-grid;
+        display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr;
-        gap: 0px 30px;
-        justify-content: center;
+        justify-content: space-between;
     }
+    /*Cards*/
     .bio {
         grid-column-start: 1;
-        grid-column-end: 2;
+        text-align: center;
     }
     .about {
         grid-column-start: 2;
-        grid-column-end: 3;
     }
     .projects {
         grid-column-start: 3;
-        grid-column-end: 4;
     }
     .card {
-        margin: 1%;
+        margin-top: 8%;
+        padding: 10px;
         overflow: hidden;
         background-color: whitesmoke;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         font-family: 'Roboto', sans-serif;
-        width: 75%;
-        height: 75%;
+        width: 85%;
+        height: 100%;
         border-radius: 5px;
+    }
+    /*Picture*/
+    .selfie {
+        height: 200px;
+        width: 200px;
+        background-color: var(--jet);
+        border-radius: 100px;
+        overflow: hidden;
+    }
+    .selfie img {
+        height: 272px;
+        width: 200px;
+        margin-top: -50px;
+    }
+    /*Icon list for bio*/
+    .header-list {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+    }
+    .header-list ul li {
+        display: inline-block;
+        list-style-type: none;
+        margin-right: -4px;
+        padding-right: 30px;
+        padding-left: 30px;
+        border-right: 1px solid var(--jet);
+        border-left: 1px solid var(--jet);
+        font-size: 32px;
+        color: var(--jet);
+    }
+    .header-list ul li a {
+        text-decoration: none;
+        color: var(--jet);
+    }
+    .icon {
+        height: 45px;
+        width: 45px;
     }
 }
