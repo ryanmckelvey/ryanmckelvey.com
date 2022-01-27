@@ -23,6 +23,15 @@ body {
 
 /**-------------Classes-------------**/
 
+nav div a {
+    text-decoration: none;
+    color: var(--jet);
+}
+
+nav div a:hover {
+    color: var(--springgreen);
+}
+
 
 /*Cards*/
 
@@ -111,8 +120,8 @@ body {
     max-width: 100%;
 }
 
-.project a:hover {
-    background-color: var(--springgreen);
+.project:hover {
+    color: var(--springgreen);
 }
 
 
@@ -162,6 +171,7 @@ nav p {
 
 .card {
     width: 100%;
+    margin-bottom: 15px;
 }
 
 .bio {
@@ -223,5 +233,14 @@ nav p {
     }
     .projects {
         grid-column: 3;
+    }
+}
+
+
+/**for very skinny screens**/
+
+@media only screen and (max-width:385px) {
+    nav {
+        font-size: 18px;
     }
 }
