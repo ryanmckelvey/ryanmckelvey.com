@@ -21,22 +21,157 @@ body {
 }
 
 
-/**-------------Ids-------------**/
-
-
 /**-------------Classes-------------**/
 
+
+/*Cards*/
+
 .card {
-    margin-left: 15px;
-    margin-right: 15px;
-    width: 33%;
-    height: 100px;
+    padding: 1%;
+    margin-top: 8%;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    width: 85%;
+    height: 630px;
+    border-radius: 5px;
+}
+
+
+/*Picture*/
+
+.selfie {
+    height: 200px;
+    width: 200px;
+    background-color: var(--jet);
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.selfie img {
+    height: 272px;
+    width: 200px;
+    margin-top: -50px;
+}
+
+
+/*Icon list for bio*/
+
+.header-list {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.header-list ul li {
+    display: inline-block;
+    list-style-type: none;
+    margin-right: -4px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-right: 1px solid var(--jet);
+    border-left: 1px solid var(--jet);
+    font-size: 32px;
+    color: var(--jet);
+}
+
+.header-list ul li a {
+    text-decoration: none;
+    color: var(--jet);
+}
+
+.icon {
+    height: 45px;
+    width: 45px;
+}
+
+.history {
+    height: 475px;
+    overflow-y: scroll;
+    padding: 5px;
+    margin-top: 25px;
+}
+
+.project-list {
+    overflow-y: scroll;
+    max-height: 475px;
+    margin-top: 25px;
+}
+
+.project {
+    padding: 5px;
+    border-bottom: #27292bff 1px solid;
+    font-family: 'IBM Plex Sans', sans-serif;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    max-width: 100%;
+}
+
+.project a:hover {
+    background-color: var(--springgreen);
+}
+
+
+/**-------------Mobile View-------------**/
+
+body {
+    margin: 0;
+}
+
+nav {
+    background: whitesmoke;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    max-width: 100%;
+    height: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    overflow: hidden;
+}
+
+nav p {
+    justify-content: left;
+    align-content: center;
+}
+
+
+/*Main page*/
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#main-page {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card {
+    width: 100%;
+}
+
+.bio {
+    text-align: center;
 }
 
 
 /**-------------Desktop View-------------**/
 
-@media only screen and (min-width: 1230px) {
+@media only screen and (min-width: 927px) {
     body {
         margin: 0;
     }
@@ -69,12 +204,16 @@ body {
     #main-page {
         width: 80%;
         height: 100%;
-        display: grid;
+        display: inline-grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr;
         justify-content: space-between;
     }
-    /*Cards*/
+    .card {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
     .bio {
         grid-column-start: 1;
         text-align: center;
@@ -83,80 +222,6 @@ body {
         grid-column-start: 2;
     }
     .projects {
-        grid-column-start: 3;
-    }
-    .card {
-        margin-top: 8%;
-        padding: 10px;
-        background-color: whitesmoke;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-family: 'Roboto', sans-serif;
-        width: 85%;
-        height: 630px;
-        border-radius: 5px;
-    }
-    /*Picture*/
-    .selfie {
-        height: 200px;
-        width: 200px;
-        background-color: var(--jet);
-        border-radius: 100px;
-        overflow: hidden;
-    }
-    .selfie img {
-        height: 272px;
-        width: 200px;
-        margin-top: -50px;
-    }
-    /*Icon list for bio*/
-    .header-list {
-        display: flex;
-        justify-content: space-between;
-        align-content: center;
-    }
-    .header-list ul li {
-        display: inline-block;
-        list-style-type: none;
-        margin-right: -4px;
-        padding-right: 30px;
-        padding-left: 30px;
-        border-right: 1px solid var(--jet);
-        border-left: 1px solid var(--jet);
-        font-size: 32px;
-        color: var(--jet);
-    }
-    .header-list ul li a {
-        text-decoration: none;
-        color: var(--jet);
-    }
-    .icon {
-        height: 45px;
-        width: 45px;
-    }
-    .history {
-        height: 475px;
-        overflow-y: scroll;
-        margin-top: 25px;
-    }
-    .project-list {
-        overflow-y: scroll;
-        max-height: 475px;
-        margin-top: 25px;
-    }
-    .project {
-        padding: 5px;
-        border-bottom: #27292bff 1px solid;
-        font-family: 'IBM Plex Sans', sans-serif;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        max-width: 100%;
-        margin: 10px;
-    }
-    .project a:hover {
-        background-color: var(--springgreen);
+        grid-column: 3;
     }
 }
